@@ -1,2 +1,10 @@
 .content
   %h1 Calendar of Events
+  %ul#list
+    - @events.each do |e|
+      %li.event
+        %span.date= e.starts_at.to_date 
+        to
+        %span.date= e.ends_at.to_date
+        .event_name= e.name
+    = will_paginate @events

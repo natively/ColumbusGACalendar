@@ -4,14 +4,25 @@
   margin: 0px;
   padding: 0px; }
 
+/* mixins and variables */
 /* generics */
 h1 {
   font-size: 2em; }
 
-/* classes */
+li {
+  list-style: none; }
+
+/* classes/id's */
 .content {
   margin: auto;
   width: 900px; }
 
-/* ID's */
-/* mixins */
+span.date {
+  color: #555555; }
+
+.event_name {
+  font-size: 1.5em; }
+
+#list {
+  float: right;
+  width: 588px; }

@@ -14,6 +14,7 @@ end
 
 gem 'haml'
 gem 'nokogiri'
+gem 'will_paginate'
 
 # Use unicorn as the web server
 # gem 'unicorn'
