@@ -1,6 +1,14 @@
 /* Let's keep it simple this time, okay? */
-* { margin:0px; padding:0px; }
+
+/* reset */
+* { margin:0px; padding:0px; } 
+
+/* generics */
 h1 { font-size: 2em; }
 
-.content {margin:auto; width:900px;}
+/* classes */
+.content { margin:auto; width:900px; }
 
+/* ID's */
+
+/* mixins */

@@ -1,11 +1,17 @@
 /* Let's keep it simple this time, okay? */
+/* reset */
 * {
   margin: 0px;
   padding: 0px; }
 
+/* generics */
 h1 {
   font-size: 2em; }
 
+/* classes */
 .content {
   margin: auto;
   width: 900px; }
+
+/* ID's */
+/* mixins */
