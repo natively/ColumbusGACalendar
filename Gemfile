@@ -15,6 +15,8 @@ end
 gem 'haml'
 gem 'nokogiri'
 gem 'will_paginate'
+gem 'meta_search'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

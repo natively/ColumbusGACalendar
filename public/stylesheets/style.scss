@@ -3,18 +3,31 @@
 /* reset */
 * { margin:0px; padding:0px; } 
 
-/* mixins and variables */
 $medium-gray: #555;
+$yellow: #FFF3bF;
+$brick: #BF684D;
 
-/* generics */
 h1 { font-size: 2em; }
 li { list-style:none; }
+a { text-decoration:none; }
 
-/* classes/id's */
+#featured { float: left; background-color:$yellow; width:288px; margin:12px; }
+#search_box { float:left; margin-left:12px; width:288px; position:fixed; bottom:50px; background:url(../images/brick.png);
+  label { margin-left:6px; }
+  input { width:66px; } }
+.ui-datepicker { background-color: $yellow;
+  a { cursor:pointer; } }
+
+#list { float:right; width:588px; margin-bottom:50px !important; }
+
 .content { margin:auto; width:900px; }
+.event { padding:10px;
+  &.even { background-color:#fff;}
+  &.odd { background-color: lighten($yellow, 5%); }
+  .event_name { font-size:1.25em; line-height:1.25em; } }
 
-span.date { color: $medium-gray; }
-
-.event_name { font-size:1.5em; }
-
-#list { float:right; width:588px; }
+/* pagination */
+div.footer { position:fixed; bottom:0px; width:100%; height:50px; background:url(../images/brick.png);
+  .pagination { margin:0px auto; width:960px; line-height:1.5em; font-size:2.5em; 
+    .previous_page {position:fixed; left:0; }
+    .next_page { position:fixed; right:0; } } }

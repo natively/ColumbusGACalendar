@@ -4,25 +4,72 @@
   margin: 0px;
   padding: 0px; }
 
-/* mixins and variables */
-/* generics */
 h1 {
   font-size: 2em; }
 
 li {
   list-style: none; }
 
-/* classes/id's */
+a {
+  text-decoration: none; }
+
+#featured {
+  float: left;
+  background-color: #fff3bf;
+  width: 288px;
+  margin: 12px; }
+
+#search_box {
+  float: left;
+  margin-left: 12px;
+  width: 288px;
+  position: fixed;
+  bottom: 50px;
+  background: url(../images/brick.png); }
+  #search_box label {
+    margin-left: 6px; }
+  #search_box input {
+    width: 66px; }
+
+.ui-datepicker {
+  background-color: #fff3bf; }
+  .ui-datepicker a {
+    cursor: pointer; }
+
+#list {
+  float: right;
+  width: 588px;
+  margin-bottom: 50px !important; }
+
 .content {
   margin: auto;
   width: 900px; }
 
-span.date {
-  color: #555555; }
+.event {
+  padding: 10px; }
+  .event.even {
+    background-color: #fff; }
+  .event.odd {
+    background-color: #fff8d9; }
+  .event .event_name {
+    font-size: 1.25em;
+    line-height: 1.25em; }
 
-.event_name {
-  font-size: 1.5em; }
-
-#list {
-  float: right;
-  width: 588px; }
+/* pagination */
+div.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background: url(../images/brick.png); }
+  div.footer .pagination {
+    margin: 0px auto;
+    width: 960px;
+    line-height: 1.5em;
+    font-size: 2.5em; }
+    div.footer .pagination .previous_page {
+      position: fixed;
+      left: 0; }
+    div.footer .pagination .next_page {
+      position: fixed;
+      right: 0; }
