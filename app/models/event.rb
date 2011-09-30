@@ -24,7 +24,7 @@ class Event < ActiveRecord::Base
     if search
       where('name LIKE ?', "%#{search}%")
     else
-      Event.all
+      scoped
     end
   end
 end
