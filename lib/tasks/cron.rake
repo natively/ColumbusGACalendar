@@ -11,9 +11,6 @@ task :cron => :environment do
   
   Nokogiri::XML(open(url)).xpath("//event").each do |e|
     puts "Creating " + (e>"event_name").text + "..."
-
-
-    eurl = 
     
     # get the date
     start_date = DateTime.parse( (e>"start_date").text )
