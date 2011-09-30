@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   def index
     @title = "Columbus Georgia Calendar of Events"
 
-    @events = Event.search(params[:keyword]).datefilter(params[:from], params[:to]).order('starts_at').paginate(:page => params[:page], :per_page => 20 )
+    @events = Event.datefilter(params[:from], params[:to]).search(params[:keyword]).order('starts_at').paginate(:page => params[:page], :per_page => 20 )
     @featured_events = Event.featured.after_today
 
     respond_to do |format|
