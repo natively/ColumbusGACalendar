@@ -1,0 +1,15 @@
+%h2 Filter
+= form_tag events_path, :method => 'get', :id => "search_box" do
+  %table
+    %tr
+      %td= label :keyword, "Keyword:"
+      %td= text_field_tag :keyword, params[:keyword], :class => "form_field"
+    %tr
+      %td= label :from, "From:"
+      %td= text_field_tag :from, params[:from], :class => "form_field"
+    %tr
+      %td= label :to, "To:"
+      %td= text_field_tag :to, params[:to], :class => "form_field"
+    %tr
+      %td= submit_tag "Filter"
+      %td= submit_tag "Reset", :class => "reset"

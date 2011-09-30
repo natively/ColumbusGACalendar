@@ -1,0 +1,8 @@
+.upcoming_events_header
+  %h2 Upcoming Events
+%ul#list
+  - @events.each_with_index do |e, i|
+  - row_class = i%2 == 0 ? "even" : "odd"
+    %li.event{ :class => "#{row_class}" }
+      %span.date= e.starts_at.strftime("%B %d, %Y")
+      .event_name= link_to e.name, event_path(e)

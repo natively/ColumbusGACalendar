@@ -1,6 +1,8 @@
 desc 'this task populates our event table from eb-xml streams'
 
 task :cron => :environment do
+  Event.destroy_all
+
   require 'nokogiri'
   require 'open-uri'
 
@@ -10,15 +12,12 @@ task :cron => :environment do
   Nokogiri::XML(open(url)).xpath("//event").each do |e|
     puts "Creating " + (e>"event_name").text + "..."
 
+
+    eurl = 
+    
     # get the date
     start_date = DateTime.parse( (e>"start_date").text )
     end_date = DateTime.parse( (e>"end_date").text )
-
-    #start_date = DateTime.parse( (date_range>"start_date").text + 
-    #                             (date_range>"start_time").text )
-    #end_date = DateTime.parse( (date_range>"end_date").text +
-    #                           (date_range>"end_time").text )
-
 
     Event.create(
       :name => (e>"event_name").text,

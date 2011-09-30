@@ -4,32 +4,58 @@
   margin: 0px;
   padding: 0px; }
 
-h1 {
-  font-size: 2em; }
-
 li {
   list-style: none; }
 
 a {
   text-decoration: none; }
 
-#featured {
-  float: left;
-  background-color: #fff3bf;
-  width: 288px;
-  margin: 12px; }
+span.error {
+  padding: 0px; }
 
-#search_box {
+div#header {
+  margin-bottom: 8px; }
+
+#left {
   float: left;
-  margin-left: 12px;
   width: 288px;
-  position: fixed;
-  bottom: 50px;
+  margin-left: 12px; }
+
+.content {
+  margin: auto;
+  width: 900px; }
+
+div.featured_events_header {
+  width: 288px;
+  background-color: #bf684d; }
+  div.featured_events_header h2 {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #bf684d; }
+
+div.upcoming_events_header {
+  float: right;
+  width: 588px;
+  background-color: #bf684d; }
+  div.upcoming_events_header h2 {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #bf684d; }
+
+div#search_container h2 {
+  padding: 10px;
+  color: white;
+  display: block;
+  background-color: #bf684d; }
+div#search_container #search_box {
+  padding-top: 3px;
   background: url(../images/brick.png); }
-  #search_box label {
+  div#search_container #search_box label {
     margin-left: 6px; }
-  #search_box input {
-    width: 66px; }
+  div#search_container #search_box input {
+    width: 138px; }
 
 .ui-datepicker {
   background-color: #fff3bf; }
@@ -41,10 +67,6 @@ a {
   width: 588px;
   margin-bottom: 50px !important; }
 
-.content {
-  margin: auto;
-  width: 900px; }
-
 .event {
   padding: 10px; }
   .event.even {
@@ -54,8 +76,10 @@ a {
   .event .event_name {
     font-size: 1.25em;
     line-height: 1.25em; }
+  .event .date {
+    font-style: italic;
+    color: #555555; }
 
-/* pagination */
 div.footer {
   position: fixed;
   bottom: 0px;
