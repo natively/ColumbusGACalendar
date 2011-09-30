@@ -1,5 +1,7 @@
 .upcoming_events_header
   %h2 Upcoming Events
+- if @events.empty?
+  .error No events found!
 %ul#list
   - @events.each_with_index do |e, i|
   - row_class = i%2 == 0 ? "even" : "odd"
