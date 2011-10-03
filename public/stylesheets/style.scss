@@ -30,7 +30,9 @@ div#search_container {
 .ui-datepicker { background-color: $yellow;
       a { cursor:pointer; } }
 
-#events .error { width:564px; float:right; }
+#events {
+  .pagination { float:right; }
+  .error { width:564px; float:right; } }
 
 #list { float:right; width:588px; margin-bottom:50px !important; }
 .event { padding:10px;
