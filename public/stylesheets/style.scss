@@ -15,7 +15,9 @@ a { text-decoration:none; }
 span.error { padding: 0px; }
 
 div#header { margin-bottom: 8px;
-  a:hover { background-color: white; } } 
+  a { 
+    img { border:none; }
+    &:hover { background-color: white; } } }
 #left { float: left; width: 288px; margin-left:12px; }
 .content { margin:auto; width:900px; }
 div.featured_events_header { width:288px; background-color: $brick;
