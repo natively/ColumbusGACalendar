@@ -1,18 +1,23 @@
-jQuery(document).ready(function() {
-  jQuery(".reset").click(function() {
-    jQuery(".form_field").val("");
+$(document).ready(function() {
+  $(".reset").click(function() {
+    $(".form_field").val("");
     return;
   });
 
-  var dates = jQuery("#from, #to").datepicker({
+  var dates = $("#from, #to").datepicker({
     onSelect: function( selectedDate ) {
       var option = this.id == "from" ? "minDate" : "maxDate",
-        instance = jQuery( this ).data( "datepicker" ),
-        date = jQuery.datepicker.parseDate(
+        instance = $( this ).data( "datepicker" ),
+        date = $.datepicker.parseDate(
           instance.settings.dateFormat ||
-          jQuery.datepicker._defaults.dateFormat,
+          $.datepicker._defaults.dateFormat,
           selectedDate, instance.settings );
       dates.not( this ).datepicker( "option", option, date );
     }
+  });
+
+  $('.event_name a').bind('click', function(){
+    $(this).parent().next('.event_details').toggle();
+    return false;
   });
 });

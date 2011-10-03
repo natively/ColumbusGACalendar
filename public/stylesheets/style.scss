@@ -14,7 +14,8 @@ li { list-style:none; }
 a { text-decoration:none; }
 span.error { padding: 0px; }
 
-div#header { margin-bottom: 8px;} 
+div#header { margin-bottom: 8px;
+  a:hover { background-color: white; } } 
 #left { float: left; width: 288px; margin-left:12px; }
 .content { margin:auto; width:900px; }
 div.featured_events_header { width:288px; background-color: $brick;
@@ -32,7 +33,10 @@ div#search_container {
 
 #events {
   .pagination { float:right; }
-  .error { width:564px; float:right; } }
+  .error { width:564px; float:right; }
+  .event_details { display:none; margin-top:0.5em; 
+    p { margin-top: 0.25em; 
+      span { color: $brick; } } } }
 
 #list { float:right; width:588px; margin-bottom:50px !important; }
 .event { padding:10px;

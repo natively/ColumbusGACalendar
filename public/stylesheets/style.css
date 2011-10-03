@@ -15,6 +15,8 @@ span.error {
 
 div#header {
   margin-bottom: 8px; }
+  div#header a:hover {
+    background-color: white; }
 
 #left {
   float: left;
@@ -67,6 +69,13 @@ div#search_container #search_box {
 #events .error {
   width: 564px;
   float: right; }
+#events .event_details {
+  display: none;
+  margin-top: 0.5em; }
+  #events .event_details p {
+    margin-top: 0.25em; }
+    #events .event_details p span {
+      color: #bf684d; }
 
 #list {
   float: right;
