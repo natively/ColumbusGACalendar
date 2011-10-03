@@ -62,6 +62,12 @@ div#search_container #search_box {
   .ui-datepicker a {
     cursor: pointer; }
 
+#events .pagination {
+  float: right; }
+#events .error {
+  width: 564px;
+  float: right; }
+
 #list {
   float: right;
   width: 588px;

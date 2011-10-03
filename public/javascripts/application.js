@@ -13,8 +13,6 @@ jQuery(document).ready(function() {
           jQuery.datepicker._defaults.dateFormat,
           selectedDate, instance.settings );
       dates.not( this ).datepicker( "option", option, date );
-
-      // jQuery.get(jQuery('#search_box').attr('action'), jQuery('#search_box').serialize(), null, 'script' );
     }
   });
 });
