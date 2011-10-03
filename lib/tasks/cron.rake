@@ -16,8 +16,6 @@ task :cron => :environment do
     e_details = Nokogiri::XML(open(e_url)).xpath("//public_event_detail")
 
     # get the date
-    #start_date = DateTime.strptime( ((e_details>"start_date").text + ' ' + (e_details>"start_time").text), "%Y-%a-%d %I:%M:S %p")
-    #end_date = DateTime.strptime( ((e_details>"end_date").text + ' ' + (e_details>"end_time").text), "%Y-%a-%d %I:%M:S %p")
     start_date = DateTime.parse( ( (e_details>"start_date").text + ' ' + (e_details>"start_time").text ) )
     end_date = DateTime.parse( ( (e_details>"end_date").text + ' ' + (e_details>"end_time").text ) ) 
 
