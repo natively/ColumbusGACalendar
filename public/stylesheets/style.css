@@ -10,9 +10,6 @@ li {
 a {
   text-decoration: none; }
 
-span.error {
-  padding: 0px; }
-
 div#header {
   margin-bottom: 8px; }
   div#header a img {
@@ -29,15 +26,6 @@ div#header {
   margin: auto;
   width: 900px; }
 
-div.featured_events_header {
-  width: 288px;
-  background-color: #bf684d; }
-  div.featured_events_header h2 {
-    padding: 10px;
-    color: white;
-    display: block;
-    background-color: #bf684d; }
-
 div.upcoming_events_header {
   float: right;
   width: 588px;
@@ -47,6 +35,48 @@ div.upcoming_events_header {
     color: white;
     display: block;
     background-color: #bf684d; }
+
+div#featured_events {
+  float: right;
+  width: 588px; }
+  div#featured_events div.featured_events_header {
+    width: 588px;
+    background-color: #bf684d; }
+    div#featured_events div.featured_events_header h2 {
+      padding: 10px;
+      color: white;
+      display: block;
+      background-color: #bf684d; }
+  div#featured_events p {
+    padding: 10px;
+    padding-top: 6px; }
+  div#featured_events h3 {
+    margin-top: 10px; }
+  div#featured_events img {
+    float: left;
+    padding: 10px;
+    padding-top: 0; }
+
+div#event_details {
+  width: 900px;
+  margin: auto; }
+  div#event_details h2 {
+    padding: 10px;
+    color: white;
+    display: block;
+    background-color: #bf684d; }
+  div#event_details h2 {
+    margin-bottom: 10px; }
+  div#event_details img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+  div#event_details p {
+    padding-left: 10px; }
+    div#event_details p span {
+      color: #bf684d; }
+    div#event_details p.description {
+      padding: 10px; }
 
 div#search_container h2 {
   padding: 10px;

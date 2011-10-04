@@ -1,0 +1,15 @@
+#event_details
+  %p#notice= notice
+  %h2.name=@event.name
+  - unless @event.image_url.empty?
+    = image_tag @event.image_url
+  %p
+    %span Where:
+    = @event.location
+  %p
+    %span Begins:
+    = @event.starts_at.strftime("%A %b %d, %Y %I:%M%p")
+  %p
+    %span Ends:
+    = @event.ends_at.strftime("%A %b %d, %Y %I:%M%p")
+  %p.description= @event.description

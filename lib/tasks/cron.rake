@@ -19,10 +19,16 @@ task :cron => :environment do
     start_date = DateTime.parse( ( (e_details>"start_date").text + ' ' + (e_details>"start_time").text ) )
     end_date = DateTime.parse( ( (e_details>"end_date").text + ' ' + (e_details>"end_time").text ) ) 
 
+    featured = (e_details>"featured").text
+
+    image_url = (e_details>"picture_full").text
+
     Event.create(
       :name => (e>"event_name").text,
       :unique_event_id => e['event_id'],
       :description => (e_details>"description").text,
+      :featured => featured,
+      :image_url => image_url,
       :location => (e>"location_name").text,
       :starts_at => start_date,
       :ends_at => end_date )

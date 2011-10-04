@@ -12,18 +12,31 @@ $brick: #BF684D;
 
 li { list-style:none; }
 a { text-decoration:none; }
-span.error { padding: 0px; }
 
 div#header { margin-bottom: 8px;
   a { 
     img { border:none; }
     &:hover { background-color: white; } } }
+
 #left { float: left; width: 288px; margin-left:12px; }
 .content { margin:auto; width:900px; }
-div.featured_events_header { width:288px; background-color: $brick;
-  @include header; }
+
 div.upcoming_events_header { float:right; width: 588px; background-color: $brick;
   @include header; }
+
+div#featured_events { float:right; width:588px;
+  div.featured_events_header { width:588px; background-color: $brick;
+    @include header; }
+  p { padding:10px; padding-top:6px; }
+  h3 { margin-top:10px; }
+  img { float:left; padding:10px; padding-top:0; } }
+
+div#event_details { width:900px; margin:auto; @include header; 
+  h2 { margin-bottom:10px; }
+  img { float:left; margin-left: 10px; margin-right:10px;}
+  p { padding-left:10px;
+    span { color:$brick; }
+    &.description { padding:10px; } } }
 
 div#search_container {
   @include header;

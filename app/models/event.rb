@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   validates_uniqueness_of :unique_event_id
 
-  scope :after_today, where('starts_at > ?', Time.now )
+  scope :after_today, where('starts_at >= ?', Time.now )
   scope :featured, where('featured = ?', true)
 
   def self.datefilter(starts, ends)

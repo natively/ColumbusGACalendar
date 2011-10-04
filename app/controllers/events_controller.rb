@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 
     @events = Event.datefilter(params[:from], params[:to]).search(params[:keyword]).order('starts_at').paginate(:page => params[:page], :per_page => 15 )
     @featured_events = Event.featured.after_today
+    @featured_events = @featured_events[rand(@featured_events.size)]
 
     respond_to do |format|
       format.html # index.html.erb
