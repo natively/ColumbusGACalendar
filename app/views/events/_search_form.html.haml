@@ -1,5 +1,6 @@
-%h2 Filter
+%h2 Search
 = form_tag events_path, :method => 'get', :id => "search_box" do
+  .cal_from
   %table
     %tr
       %td= label :keyword, "Keyword:"
@@ -11,5 +12,5 @@
       %td= label :to, "To:"
       %td= text_field_tag :to, params[:to], :class => "form_field"
     %tr
-      %td= submit_tag "Filter"
+      %td= submit_tag "Search"
       %td= submit_tag "Reset", :class => "reset"

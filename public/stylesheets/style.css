@@ -9,6 +9,8 @@ li {
 
 a {
   text-decoration: none; }
+  a:hover {
+    background-color: #cce2eb; }
 
 div#header {
   margin-bottom: 8px; }
@@ -29,24 +31,23 @@ div#header {
 div.upcoming_events_header {
   float: right;
   width: 588px;
-  background-color: #bf684d; }
+  background-color: #336d85; }
   div.upcoming_events_header h2 {
     padding: 10px;
     color: white;
     display: block;
-    background-color: #bf684d; }
+    background-color: #336d85; }
 
 div#featured_events {
-  float: right;
-  width: 588px; }
+  width: 288px; }
   div#featured_events div.featured_events_header {
-    width: 588px;
-    background-color: #bf684d; }
+    width: 288px;
+    background-color: #336d85; }
     div#featured_events div.featured_events_header h2 {
       padding: 10px;
       color: white;
       display: block;
-      background-color: #bf684d; }
+      background-color: #336d85; }
   div#featured_events p {
     padding: 10px;
     padding-top: 6px; }
@@ -64,7 +65,7 @@ div#event_details {
     padding: 10px;
     color: white;
     display: block;
-    background-color: #bf684d; }
+    background-color: #336d85; }
   div#event_details h2 {
     margin-bottom: 10px; }
   div#event_details img {
@@ -74,7 +75,7 @@ div#event_details {
   div#event_details p {
     padding-left: 10px; }
     div#event_details p span {
-      color: #bf684d; }
+      color: #336d85; }
     div#event_details p.description {
       padding: 10px; }
 
@@ -82,19 +83,33 @@ div#search_container h2 {
   padding: 10px;
   color: white;
   display: block;
-  background-color: #bf684d; }
+  background-color: #336d85; }
 div#search_container #search_box {
   padding-top: 3px;
-  background: url(../images/brick.png); }
+  background: #8ab77a; }
   div#search_container #search_box label {
     margin-left: 6px; }
   div#search_container #search_box input {
     width: 138px; }
 
 .ui-datepicker {
-  background-color: #fff3bf; }
+  background-color: #ffe98c; }
   .ui-datepicker a {
     cursor: pointer; }
+    .ui-datepicker a.ui-datepicker-prev {
+      float: left; }
+    .ui-datepicker a.ui-datepicker-next {
+      float: left;
+      margin-left: 5px; }
+  .ui-datepicker table {
+    width: 100%; }
+    .ui-datepicker table th {
+      background-color: white; }
+
+.cal_from .ui-datepicker {
+  background-color: #fff3bf; }
+  .cal_from .ui-datepicker .ui-datepicker-title {
+    float: right; }
 
 #events .pagination {
   float: right; }
@@ -107,7 +122,7 @@ div#search_container #search_box {
   #events .event_details p {
     margin-top: 0.25em; }
     #events .event_details p span {
-      color: #bf684d; }
+      color: #336d85; }
 
 #list {
   float: right;
@@ -126,21 +141,3 @@ div#search_container #search_box {
   .event .date {
     font-style: italic;
     color: #555555; }
-
-div.footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  height: 50px;
-  background: url(../images/brick.png); }
-  div.footer .pagination {
-    margin: 0px auto;
-    width: 960px;
-    line-height: 1.5em;
-    font-size: 2.5em; }
-    div.footer .pagination .previous_page {
-      position: fixed;
-      left: 0; }
-    div.footer .pagination .next_page {
-      position: fixed;
-      right: 0; }

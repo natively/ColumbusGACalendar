@@ -1,4 +1,14 @@
 $(document).ready(function() {
+  $(".cal_from").datepicker({
+    onselect: function() {
+      console.log('clicked!');
+      $("#search_box").submit();
+    },
+    altField: "#from",
+    prevText: "&larr; Prev",
+    nextText: "Next &rarr;"
+  });
+
   $(".reset").click(function() {
     $(".form_field").val("");
     return;
@@ -6,6 +16,7 @@ $(document).ready(function() {
 
   var dates = $("#from, #to").datepicker({
     onSelect: function( selectedDate ) {
+      console.log("got here though!");
       var option = this.id == "from" ? "minDate" : "maxDate",
         instance = $( this ).data( "datepicker" ),
         date = $.datepicker.parseDate(
@@ -13,7 +24,9 @@ $(document).ready(function() {
           $.datepicker._defaults.dateFormat,
           selectedDate, instance.settings );
       dates.not( this ).datepicker( "option", option, date );
-    }
+    },
+    prevText: "&larr; Prev",
+    nextText: "Next &rarr;"
   });
 
   $('.event_name a').bind('click', function(){
