@@ -86,7 +86,7 @@ div#search_container h2 {
   background-color: #336d85; }
 div#search_container #search_box {
   padding-top: 3px;
-  background: #8ab77a; }
+  background: #c4dbbc; }
   div#search_container #search_box label {
     margin-left: 6px; }
   div#search_container #search_box input {
@@ -107,7 +107,7 @@ div#search_container #search_box {
       background-color: white; }
 
 .cal_from .ui-datepicker {
-  background-color: #fff3bf; }
+  background-color: #e1eddd; }
   .cal_from .ui-datepicker .ui-datepicker-title {
     float: right; }
 

@@ -42,7 +42,7 @@ div#event_details { width:900px; margin:auto; @include header;
 
 div#search_container {
   @include header;
-  #search_box { padding-top:3px; background: $green;
+  #search_box { padding-top:3px; background:lighten($green,20%);
     label { margin-left:6px; }
     input { width:138px; } } }
 
@@ -55,7 +55,7 @@ div#search_container {
   table { width:100%; 
     th { background-color: white; } } } 
 .cal_from { 
-  .ui-datepicker { background-color:$yellow;
+  .ui-datepicker { background-color:lighten($green, 30%);
     .ui-datepicker-title { float:right; } }
 }
 
