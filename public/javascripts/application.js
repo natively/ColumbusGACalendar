@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $(".cal_from").datepicker({
-    onselect: function() {
-      console.log('clicked!');
+    onSelect: function() {
       $("#search_box").submit();
     },
     altField: "#from",

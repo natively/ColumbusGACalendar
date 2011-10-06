@@ -48,7 +48,7 @@ div#search_container {
 
 
 
-.ui-datepicker { background-color: darken($yellow, 10%);
+.ui-datepicker { background-color:lighten($blue, 60%);
   a { cursor:pointer;
     &.ui-datepicker-prev { float:left; }
     &.ui-datepicker-next { float:left; margin-left:5px; } }
