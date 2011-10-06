@@ -9,7 +9,7 @@ $blue: #336D85;
 $green: #8AB77A;
 
 @mixin header { 
-  h2 { padding:10px; color: white; display:block; background-color: $blue; } }
+  h2 { padding:10px; color: white; display:block; background-color: $blue; font-weight:normal; } }
 
 li { list-style:none; }
 a { text-decoration:none; 
@@ -53,16 +53,17 @@ div#search_container {
     &.ui-datepicker-prev { float:left; }
     &.ui-datepicker-next { float:left; margin-left:5px; } }
   table { width:100%; 
-    th { background-color: white; } } } 
+    th { background-color: white; } 
+    td { text-align:center; } } } 
 .cal_from { 
   .ui-datepicker { background-color:lighten($green, 30%);
-    .ui-datepicker-title { float:right; } }
-}
+    .ui-datepicker-title { float:right; font-weight:bold; } } }
 
 #events {
   .pagination { float:right; }
   .error { width:564px; float:right; }
   .event_details { display:none; margin-top:0.5em; 
+    a.more_info { float: right; color:$blue; }
     p { margin-top: 0.25em; 
       span { color: $blue; } } } }
 
@@ -70,5 +71,5 @@ div#search_container {
 .event { padding:10px;
   &.even { background-color:#fff;}
   &.odd { background-color: lighten($yellow, 5%); }
-  .event_name { font-size:1.25em; line-height:1.25em; } 
+  .event_name { font-size:1.15em; line-height:1.25em; } 
   .date { font-style:italic; color: $gray; } }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004140402) do
+ActiveRecord::Schema.define(:version => 20111006202816) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(:version => 20111004140402) do
     t.integer  "unique_event_id"
     t.text     "description"
     t.string   "image_url"
+    t.string   "ticket_info"
+    t.string   "ticket_prices"
+    t.string   "additional_info"
+    t.string   "contact_name"
+    t.string   "contact_email"
+    t.string   "contact_phone"
   end
 
   add_index "events", ["unique_event_id"], :name => "index_events_on_unique_event_id", :unique => true

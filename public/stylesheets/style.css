@@ -36,7 +36,8 @@ div.upcoming_events_header {
     padding: 10px;
     color: white;
     display: block;
-    background-color: #336d85; }
+    background-color: #336d85;
+    font-weight: normal; }
 
 div#featured_events {
   width: 288px; }
@@ -47,7 +48,8 @@ div#featured_events {
       padding: 10px;
       color: white;
       display: block;
-      background-color: #336d85; }
+      background-color: #336d85;
+      font-weight: normal; }
   div#featured_events p {
     padding: 10px;
     padding-top: 6px; }
@@ -65,7 +67,8 @@ div#event_details {
     padding: 10px;
     color: white;
     display: block;
-    background-color: #336d85; }
+    background-color: #336d85;
+    font-weight: normal; }
   div#event_details h2 {
     margin-bottom: 10px; }
   div#event_details img {
@@ -83,7 +86,8 @@ div#search_container h2 {
   padding: 10px;
   color: white;
   display: block;
-  background-color: #336d85; }
+  background-color: #336d85;
+  font-weight: normal; }
 div#search_container #search_box {
   padding-top: 3px;
   background: #c4dbbc; }
@@ -105,11 +109,14 @@ div#search_container #search_box {
     width: 100%; }
     .ui-datepicker table th {
       background-color: white; }
+    .ui-datepicker table td {
+      text-align: center; }
 
 .cal_from .ui-datepicker {
   background-color: #e1eddd; }
   .cal_from .ui-datepicker .ui-datepicker-title {
-    float: right; }
+    float: right;
+    font-weight: bold; }
 
 #events .pagination {
   float: right; }
@@ -119,6 +126,9 @@ div#search_container #search_box {
 #events .event_details {
   display: none;
   margin-top: 0.5em; }
+  #events .event_details a.more_info {
+    float: right;
+    color: #336d85; }
   #events .event_details p {
     margin-top: 0.25em; }
     #events .event_details p span {
@@ -136,7 +146,7 @@ div#search_container #search_box {
   .event.odd {
     background-color: #fff8d9; }
   .event .event_name {
-    font-size: 1.25em;
+    font-size: 1.15em;
     line-height: 1.25em; }
   .event .date {
     font-style: italic;

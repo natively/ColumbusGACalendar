@@ -1,8 +1,9 @@
 desc 'this task populates our event table from eb-xml streams'
 
 task :cron => :environment do
+  puts 'Killing the old events table...'
   Event.destroy_all
-
+  puts 'Done!'
   require 'nokogiri'
   require 'open-uri'
 
@@ -20,8 +21,17 @@ task :cron => :environment do
     end_date = DateTime.parse( ( (e_details>"end_date").text + ' ' + (e_details>"end_time").text ) ) 
 
     featured = (e_details>"featured").text
-
     image_url = (e_details>"picture_full").text
+
+    ticket_info = (e_details>"ticket_info").text
+    ticket_prices = (e_details>"ticket_prices").text
+
+    additional_info = (e_details>"additional_info").text
+
+    contact_name = (e_details>"contact").text
+    contact_email = (e_details>"contact_email").text
+    contact_phone = (e_details>"contact_phone").text
+
 
     Event.create(
       :name => (e>"event_name").text,
@@ -31,6 +41,13 @@ task :cron => :environment do
       :image_url => image_url,
       :location => (e>"location_name").text,
       :starts_at => start_date,
-      :ends_at => end_date )
+      :ends_at => end_date,
+      :ticket_info => ticket_info,
+      :ticket_prices => ticket_prices,
+      :additional_info => additional_info,
+      :contact_name => contact_name,
+      :contact_email => contact_email,
+      :contact_phone => contact_phone
+    )
   end
 end
