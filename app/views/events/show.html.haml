@@ -1,7 +1,7 @@
 #event_details
   %p#notice= notice
   %h2.name=@event.name
-  - unless @event.image_url.empty?
+  - unless @event.image_url.blank?
     = image_tag @event.image_url
   %p
     %span Where:
@@ -13,7 +13,20 @@
     %span Ends:
     = @event.ends_at.strftime("%A %b %d, %Y %I:%M%p")
   %p.description= @event.description
-  - unless @event.contact_name.nil?
+  - unless @event.contact_name.blank?
     %p
       %span Contact:
       = @event.contact_name
+    %p
+      %span Email:
+      = @event.contact_email
+    %p
+      %span Phone:
+      = @event.contact_phone
+  - unless @event.ticket_info.blank?
+    %p
+      %span Ticket Info:
+      = @event.ticket_info
+    %p
+      %span Ticket Prices:
+      = @event.ticket_prices

@@ -71,5 +71,6 @@ div#search_container {
 .event { padding:10px;
   &.even { background-color:#fff;}
   &.odd { background-color: lighten($yellow, 5%); }
-  .event_name { font-size:1.15em; line-height:1.25em; } 
+  .event_name { font-size:1.25em; line-height:1.25em; font-variant:small-caps; font-weight:bold; 
+    a { color: darken($blue, 10%); } } 
   .date { font-style:italic; color: $gray; } }

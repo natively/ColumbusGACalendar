@@ -146,8 +146,12 @@ div#search_container #search_box {
   .event.odd {
     background-color: #fff8d9; }
   .event .event_name {
-    font-size: 1.15em;
-    line-height: 1.25em; }
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-variant: small-caps;
+    font-weight: bold; }
+    .event .event_name a {
+      color: #254f60; }
   .event .date {
     font-style: italic;
     color: #555555; }
