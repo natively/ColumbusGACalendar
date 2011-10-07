@@ -8,4 +8,5 @@
     - unless fe.image_url.empty?
       = image_tag fe.image_url, :height => 128
     %h3.name= link_to fe.name, fe
+    %p.date= fe.starts_at.strftime("%B %d, %Y")
     %p.description= fe.description.slice(0..140)+'...'

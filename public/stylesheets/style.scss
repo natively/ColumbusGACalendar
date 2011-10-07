@@ -29,8 +29,9 @@ div.upcoming_events_header { float:right; width: 588px; background-color: $blue;
 div#featured_events { width:288px;
   div.featured_events_header { width:288px; background-color: $blue;
     @include header; }
-  p { padding:10px; padding-top:6px; }
-  h3 { margin-top:10px; }
+  p { padding:10px; padding-top:3px; padding-bottom:3px; 
+   &.date { font-style:italic; color: $gray; } }
+  h3 { margin-top:10px; font-variant:small-caps;}
   img { float:left; padding:10px; padding-top:0; } }
 
 div#event_details { width:900px; margin:auto; @include header; 
@@ -45,8 +46,6 @@ div#search_container {
   #search_box { padding-top:3px; background:lighten($green,20%);
     label { margin-left:6px; }
     input { width:138px; } } }
-
-
 
 .ui-datepicker { background-color:lighten($blue, 60%);
   a { cursor:pointer;

@@ -52,9 +52,14 @@ div#featured_events {
       font-weight: normal; }
   div#featured_events p {
     padding: 10px;
-    padding-top: 6px; }
+    padding-top: 3px;
+    padding-bottom: 3px; }
+    div#featured_events p.date {
+      font-style: italic;
+      color: #555555; }
   div#featured_events h3 {
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-variant: small-caps; }
   div#featured_events img {
     float: left;
     padding: 10px;

@@ -13,6 +13,8 @@
     %span Ends:
     = @event.ends_at.strftime("%A %b %d, %Y %I:%M%p")
   %p.description= @event.description
+  - unless @event.additional_info.blank?
+    %p.description= @event.additional_info
   - unless @event.contact_name.blank?
     %p
       %span Contact:
