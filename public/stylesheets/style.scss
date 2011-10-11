@@ -49,7 +49,6 @@ div#search_container {
 
 .ui-datepicker { background-color:lighten($blue, 60%);
   a { cursor:pointer;
-    &.ui-datepicker-prev { }
     &.ui-datepicker-next { margin-left:5px; } }
   table { width:100%; 
     th { background-color: white; } 
