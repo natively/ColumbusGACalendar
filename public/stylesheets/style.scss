@@ -1,74 +1,177 @@
 /* Let's keep it simple this time, okay? */
 
 /* reset */
-* { margin:0px; padding:0px; } 
+* {
+  margin: 0px;
+  padding: 0px; }
 
-$gray: #555;
-$yellow: #FFF3bF;
-$blue: #336D85;
-$green: #8AB77A;
+$gray: #555555;
+$yellow: #fff3bf;
+$blue: #336d85;
+$green: #8ab77a;
 
-@mixin header { 
-  h2 { padding:10px; color: white; display:block; background-color: $blue; font-weight:normal; } }
+@mixin header {
+  h2 {
+    padding: 10px;
+    color: $green;
+    font-style: italic;
+    display: block;
+    font-size: 2.5em;
+    //background-color: $blue;
+    font-family:Georgia;
+    font-weight: normal; } }
 
-li { list-style:none; }
-a { text-decoration:none; 
-  &:hover { background-color:lighten($blue,50%); } }
+li {
+  list-style: none; }
 
-div#header { margin-bottom: 8px;
-  a { 
-    img { border:none; }
-    &:hover { background-color: white; } } }
+a {
+  text-decoration: none;
+  &:hover {
+    background-color: lighten($blue, 50%); } }
 
-#left { float: left; width: 288px; margin-left:12px; }
-.content { margin:auto; width:900px; }
+div#header {
+  margin-bottom: 8px;
+  a {
+    img {
+      border: none; }
+    &:hover {
+      background-color: white; } } }
 
-div.upcoming_events_header { float:right; width: 588px; background-color: $blue;
+#left {
+  float: left;
+  width: 288px;
+  margin-left: 12px; }
+
+.content {
+  margin: auto;
+  width: 900px; }
+
+div.upcoming_events_header {
+  float: right;
+  width: 588px;
+  //background-color: $blue;
   @include header; }
 
-div#featured_events { width:288px;
-  div.featured_events_header { width:288px; background-color: $blue;
+div#featured_events {
+  width: 288px;
+  div.featured_events_header {
+    width: 288px;
+    //background-color: $blue;
     @include header; }
-  p { padding:10px; padding-top:3px; padding-bottom:3px; 
-   &.date { font-style:italic; color: $gray; } }
-  h3 { margin-top:10px; font-variant:small-caps;}
-  img { float:left; padding:10px; padding-top:0; } }
+  p {
+    padding: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    &.date {
+      //font-style: italic;
+      color: $gray; } }
+  h3 {
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em;}
+  img {
+    float: left;
+    padding: 10px;
+    padding-top: 0; } }
 
-div#event_details { width:900px; margin:auto; @include header; 
-  h2 { margin-bottom:10px; }
-  img { float:left; margin-left: 10px; margin-right:10px;}
-  p { padding-left:10px;
-    span { color:$blue; }
-    &.description { padding:10px; } } }
+div#event_details {
+  width: 900px;
+  margin: auto;
+  @include header;
+  h2 {
+    margin-bottom: 20px; }
+  img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+  p {
+    padding-left: 10px;
+    span {
+      color: $blue; }
+    &.description {
+      padding: 10px; } } }
 
 div#search_container {
   @include header;
-  #search_box { padding-top:3px; background:lighten($green,20%);
-    label { margin-left:6px; }
-    input { width:138px; } } }
+  #search_box {
+    padding-top: 3px;
+    //height: 300px;
+    background: lighten($green, 20%);
+    label {
+      margin-left: 6px; }
+    input {
+      width: 138px; } } }
 
-.ui-datepicker { background-color:lighten($blue, 60%);
-  a { cursor:pointer;
-    &.ui-datepicker-next { margin-left:5px; } }
-  table { width:100%; 
-    th { background-color: white; } 
-    td { text-align:center; } } } 
-.cal_from { 
-  .ui-datepicker { background-color:lighten($green, 30%);
-    .ui-datepicker-title { float:right; font-weight:bold; } } }
+.ui-datepicker {
+  background-color: lighten($blue, 60%);
+  a {
+    cursor: pointer;
+    &.ui-datepicker-next {
+      margin-left: 5px; } }
+  table {
+    width: 100%;
+    th {
+      text-align: center;
+      background-color: white; }
+    td {
+      padding: 3px 0px;
+      text-align: center; } } }
+
+.cal_from {
+  text-align: right;
+  .ui-datepicker {
+    background-color: lighten($green, 30%);
+    .ui-datepicker-prev, .ui.datepicker-next{
+      //position: relative;
+      //float: right;
+    }
+    .ui-datepicker-title {
+      float: left;
+      margin-right: 100px;
+      margin-left: 6px;
+      font-weight: bold; } } }
 
 #events {
-  .pagination { float:right; }
-  .error { width:564px; float:right; }
-  .event_details { display:none; margin-top:0.5em; 
-    a.more_info { float: right; color:$blue; }
-    p { margin-top: 0.25em; 
-      span { color: $blue; } } } }
+  .pagination {
+    float: right; }
+  .error {
+    width: 564px;
+    float: right; }
+  .event_details {
+    display: none;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    a.more_info {
+      float: right;
+      color: $blue; }
+    p {
+      margin-top: 0.25em;
+      span {
+        color: $blue; } } } }
 
-#list { float:right; width:588px; margin-bottom:50px !important; }
-.event { padding:10px;
-  &.even { background-color:#fff;}
-  &.odd { background-color: lighten($yellow, 5%); }
-  .event_name { font-size:1.25em; line-height:1.25em; font-variant:small-caps; font-weight:bold; 
-    a { color: darken($blue, 10%); } } 
-  .date { font-style:italic; color: $gray; } }
+#list {
+  float: right;
+  width: 588px;
+  margin-bottom: 50px !important; }
+
+.event {
+  padding: 5px;
+  &.even {
+    background-color: #fff; }
+  &.odd {
+    background-color: lighten($yellow, 10%); }
+  .event_name {
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em;
+    //font-variant: small-caps;
+    //font-weight: bold;
+    a {
+      color: darken($blue, 10%); } }
+  .date {
+    //font-style: italic;
+    font-size: .85em;
+    color: $gray; } }

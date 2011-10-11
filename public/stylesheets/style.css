@@ -30,36 +30,40 @@ div#header {
 
 div.upcoming_events_header {
   float: right;
-  width: 588px;
-  background-color: #336d85; }
+  width: 588px; }
   div.upcoming_events_header h2 {
     padding: 10px;
-    color: white;
+    color: #8ab77a;
+    font-style: italic;
     display: block;
-    background-color: #336d85;
+    font-size: 2.5em;
+    font-family: Georgia;
     font-weight: normal; }
 
 div#featured_events {
   width: 288px; }
   div#featured_events div.featured_events_header {
-    width: 288px;
-    background-color: #336d85; }
+    width: 288px; }
     div#featured_events div.featured_events_header h2 {
       padding: 10px;
-      color: white;
+      color: #8ab77a;
+      font-style: italic;
       display: block;
-      background-color: #336d85;
+      font-size: 2.5em;
+      font-family: Georgia;
       font-weight: normal; }
   div#featured_events p {
     padding: 10px;
     padding-top: 3px;
     padding-bottom: 3px; }
     div#featured_events p.date {
-      font-style: italic;
       color: #555555; }
   div#featured_events h3 {
     margin-top: 10px;
-    font-variant: small-caps; }
+    font-weight: normal;
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em; }
   div#featured_events img {
     float: left;
     padding: 10px;
@@ -70,12 +74,14 @@ div#event_details {
   margin: auto; }
   div#event_details h2 {
     padding: 10px;
-    color: white;
+    color: #8ab77a;
+    font-style: italic;
     display: block;
-    background-color: #336d85;
+    font-size: 2.5em;
+    font-family: Georgia;
     font-weight: normal; }
   div#event_details h2 {
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
   div#event_details img {
     float: left;
     margin-left: 10px;
@@ -89,9 +95,11 @@ div#event_details {
 
 div#search_container h2 {
   padding: 10px;
-  color: white;
+  color: #8ab77a;
+  font-style: italic;
   display: block;
-  background-color: #336d85;
+  font-size: 2.5em;
+  font-family: Georgia;
   font-weight: normal; }
 div#search_container #search_box {
   padding-top: 3px;
@@ -110,15 +118,21 @@ div#search_container #search_box {
   .ui-datepicker table {
     width: 100%; }
     .ui-datepicker table th {
+      text-align: center;
       background-color: white; }
     .ui-datepicker table td {
+      padding: 3px 0px;
       text-align: center; }
 
-.cal_from .ui-datepicker {
-  background-color: #e1eddd; }
-  .cal_from .ui-datepicker .ui-datepicker-title {
-    float: right;
-    font-weight: bold; }
+.cal_from {
+  text-align: right; }
+  .cal_from .ui-datepicker {
+    background-color: #e1eddd; }
+    .cal_from .ui-datepicker .ui-datepicker-title {
+      float: left;
+      margin-right: 100px;
+      margin-left: 6px;
+      font-weight: bold; }
 
 #events .pagination {
   float: right; }
@@ -127,7 +141,9 @@ div#search_container #search_box {
   float: right; }
 #events .event_details {
   display: none;
-  margin-top: 0.5em; }
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
   #events .event_details a.more_info {
     float: right;
     color: #336d85; }
@@ -142,18 +158,17 @@ div#search_container #search_box {
   margin-bottom: 50px !important; }
 
 .event {
-  padding: 10px; }
+  padding: 5px; }
   .event.even {
     background-color: #fff; }
   .event.odd {
-    background-color: #fff8d9; }
+    background-color: #fffdf2; }
   .event .event_name {
-    font-size: 1.25em;
-    line-height: 1.25em;
-    font-variant: small-caps;
-    font-weight: bold; }
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em; }
     .event .event_name a {
       color: #254f60; }
   .event .date {
-    font-style: italic;
+    font-size: .85em;
     color: #555555; }
