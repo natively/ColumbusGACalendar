@@ -105,10 +105,7 @@ div#search_container #search_box {
   background-color: #f1f7f9; }
   .ui-datepicker a {
     cursor: pointer; }
-    .ui-datepicker a.ui-datepicker-prev {
-      float: left; }
     .ui-datepicker a.ui-datepicker-next {
-      float: left;
       margin-left: 5px; }
   .ui-datepicker table {
     width: 100%; }
