@@ -15,7 +15,6 @@ $(document).ready(function() {
 
   var dates = $("#from, #to").datepicker({
     onSelect: function( selectedDate ) {
-      console.log("got here though!");
       var option = this.id == "from" ? "minDate" : "maxDate",
         instance = $( this ).data( "datepicker" ),
         date = $.datepicker.parseDate(

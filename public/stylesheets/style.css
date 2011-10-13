@@ -130,7 +130,6 @@ div#search_container #search_box {
     background-color: #e1eddd; }
     .cal_from .ui-datepicker .ui-datepicker-title {
       float: left;
-      margin-right: 100px;
       margin-left: 6px;
       font-weight: bold; }
 
@@ -151,6 +150,8 @@ div#search_container #search_box {
     margin-top: 0.25em; }
     #events .event_details p span {
       color: #336d85; }
+    #events .event_details p.event_description {
+      margin-top: 1em; }
 
 #list {
   float: right;

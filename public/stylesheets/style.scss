@@ -123,13 +123,8 @@ div#search_container {
   text-align: right;
   .ui-datepicker {
     background-color: lighten($green, 30%);
-    .ui-datepicker-prev, .ui.datepicker-next{
-      //position: relative;
-      //float: right;
-    }
     .ui-datepicker-title {
       float: left;
-      margin-right: 100px;
       margin-left: 6px;
       font-weight: bold; } } }
 
@@ -150,7 +145,8 @@ div#search_container {
     p {
       margin-top: 0.25em;
       span {
-        color: $blue; } } } }
+        color: $blue; }
+      &.event_description { margin-top:1em; } } } }
 
 #list {
   float: right;
