@@ -1,10 +1,12 @@
 class Event < ActiveRecord::Base
   validates_uniqueness_of :unique_event_id
 
+  has_and_belongs_to_many :groups
+
   scope :after_today, where('starts_at >= ?', Time.now )
   scope :featured, where('featured = ?', true)
 
-  def self.datefilter(starts, ends)
+  def self.date_filter(starts, ends)
     if !starts && !ends
       after_today
     elsif !starts.empty? && !ends.empty?
@@ -17,6 +19,15 @@ class Event < ActiveRecord::Base
       where 'starts_at < ?', DateTime.strptime(ends.to_s, '%m/%d/%Y')
     else
       after_today
+    end
+  end
+
+  def self.group_filter(arg={})
+    unless arg['group_id'].empty?
+      g_id = arg['group_id']
+      where :group_id => g_id
+    else
+      scoped
     end
   end
 

@@ -108,6 +108,8 @@ div#search_container #search_box {
     margin-left: 6px; }
   div#search_container #search_box input {
     width: 138px; }
+  div#search_container #search_box select {
+    width: 138px; }
 
 .ui-datepicker {
   background-color: #f1f7f9; }

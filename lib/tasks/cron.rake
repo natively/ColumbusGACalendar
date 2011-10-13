@@ -1,11 +1,29 @@
 desc 'this task populates our event table from eb-xml streams'
 
 task :cron => :environment do
-  puts 'Killing the old events table...'
-  Event.destroy_all
-  puts 'Done!'
   require 'nokogiri'
   require 'open-uri'
+
+  puts 'Killing the old events table...'
+  Event.destroy_all
+  puts 'Killing the old groups table...'
+  Group.destroy_all
+
+  #populate the groups table
+  puts 'Creating groups...'
+  group_url = "http://xml.eventbooking.com/xml_pubcal.asp?pwl=5A6.6C9A4BC4&mode=setupinfo"
+  Nokogiri::XML(open(group_url)).xpath("//group").each do |g|
+    unless g['type'] == 'I'
+      puts 'Creating ' + g['group_name'] + ' with id=' + g['defn_id']
+      Group.new do |new_g|
+        new_g.group_name = g['group_name']
+        new_g.id = g['defn_id']
+        new_g.save
+      end
+
+    end
+  end
+  
 
   # make this the url of your EventListXML stream
   event_list_url = "http://xml.eventbooking.com/xml_pubcal.asp?pwl=5A6.6C9A4BC4&mode=rangebasic"
@@ -32,8 +50,9 @@ task :cron => :environment do
     contact_email = (e_details>"contact_email").text
     contact_phone = (e_details>"contact_phone").text
 
+    group_collection = e_details.xpath("//group").collect { |g| g['defn_id'] }
 
-    Event.create(
+    Event.new(
       :name => (e>"event_name").text,
       :unique_event_id => e['event_id'],
       :description => (e_details>"description").text,
@@ -48,6 +67,9 @@ task :cron => :environment do
       :contact_name => contact_name,
       :contact_email => contact_email,
       :contact_phone => contact_phone
-    )
+    ) do |e| 
+      e.group_ids = group_collection
+      e.save
+    end
   end
 end
