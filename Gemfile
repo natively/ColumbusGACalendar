@@ -5,7 +5,12 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+group :production do
+  gem 'pg'
+end
+group :development do
+  gem 'pg'
+end
 
 gem 'haml'
 gem 'nokogiri'
