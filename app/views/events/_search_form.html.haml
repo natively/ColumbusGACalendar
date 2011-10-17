@@ -13,7 +13,7 @@
       %td= text_field_tag :to, params[:to], :class => "form_field"
     %tr
       %td= label :group, "Category:"
-      %td= select("group", "group_id", Group.all.collect { |g| [g.group_name, g.id] }, { :include_blank => true })
+      %td= select("group", "group_id", Group.all.collect { |g| [raw(g.group_name), g.id] }, { :include_blank => true })
     %tr
       %td= submit_tag "Search"
       %td= submit_tag "Reset", :class => "reset"

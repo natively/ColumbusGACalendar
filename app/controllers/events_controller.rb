@@ -4,7 +4,12 @@ class EventsController < ApplicationController
   def index
     @title = "Columbus Georgia Calendar of Events"
 
-    @events = Event.date_filter(params[:from], params[:to]).group_filter(params[:group]).search(params[:keyword]).order('starts_at').paginate(:page => params[:page], :per_page => 15 )
+    @events = Event.date_filter(params[:from], params[:to])
+                   .search(params[:keyword])
+                   .group_filter(params[:group])
+                   .order('starts_at')
+                   .paginate(:page => params[:page], :per_page => 15 )
+                   # .group_filter(params[:group])
     @featured_events = Event.featured.after_today
     @featured_events = @featured_events[rand(@featured_events.size)]
 
@@ -13,6 +18,13 @@ class EventsController < ApplicationController
       format.xml  { render :xml => @events }
       format.js
     end
+  end
+
+  def print
+    @title = "Columbus GA Calendar - Print"
+    @events = Event.date_filter(params[:from], params[:to])
+                   .search(params[:keyword])
+                   .order('starts_at')
   end
 
   # GET /events/1
