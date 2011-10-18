@@ -38,7 +38,7 @@ class Event < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name ILIKE ?', "%#{search}%")
+      where('name ILIKE ? OR description ILIKE ?', "%#{search}%", "%#{search}%")
     else
       scoped
     end
