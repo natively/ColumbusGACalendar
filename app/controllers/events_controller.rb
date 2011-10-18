@@ -20,11 +20,14 @@ class EventsController < ApplicationController
     end
   end
 
+  # GET /events/print
   def print
     @title = "Columbus GA Calendar - Print"
-    @events = Event.date_filter(params[:from], params[:to])
-                   .search(params[:keyword])
-                   .order('starts_at')
+    @events = Event.after_today.order('starts_at')
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   # GET /events/1

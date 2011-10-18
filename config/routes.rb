@@ -1,4 +1,6 @@
 Columbusgacalendar::Application.routes.draw do
+  
+  match 'events/print' => 'events#print'
   resources :events
 
   get "events/index"
