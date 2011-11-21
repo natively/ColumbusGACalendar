@@ -1,8 +1,10 @@
 #event_details
   %p#notice= notice
+  %p
+    %a.button{ :onClick=>"history.go(-1)" } &larr; Go back
   %h2.name=@event.name
   - unless @event.image_url.blank?
-    = image_tag @event.image_url
+    = image_tag @event.image_url, :class => "event_image"
   %p
     %span Where:
     = @event.location
@@ -14,7 +16,7 @@
     = @event.ends_at.strftime("%A %b %d, %Y %I:%M%p")
   %p.description= @event.description
   - unless @event.additional_info.blank?
-    %p.description= @event.additional_info
+    %p.description!= Rinku.auto_link(@event.additional_info)
   - unless @event.contact_name.blank?
     %p
       %span Contact:
@@ -31,4 +33,5 @@
       = @event.ticket_info
     %p
       %span Ticket Prices:
-      = @event.ticket_prices
+      = @event.ticket_prices  
+  = render 'shared/facebook'

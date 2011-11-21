@@ -11,6 +11,9 @@ a {
   text-decoration: none; }
   a:hover {
     background-color: #cce2eb; }
+  a.button:hover {
+    background-color: white;
+    display: block; }
 
 div#header {
   margin-bottom: 8px; }
@@ -80,9 +83,15 @@ div#event_details {
     font-size: 2.5em;
     font-family: Georgia;
     font-weight: normal; }
+  div#event_details a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #336d85; }
+    div#event_details a.button {
+      text-decoration: none; }
   div#event_details h2 {
-    margin-bottom: 20px; }
-  div#event_details img {
+    line-height: 1em; }
+  div#event_details img.event_image {
     float: left;
     margin-left: 10px;
     margin-right: 10px; }
@@ -135,6 +144,15 @@ div#search_container #search_box {
       margin-left: 6px;
       font-weight: bold; }
 
+.link {
+  font-size: 1em;
+  margin-top: 10px; }
+  .link img {
+    vertical-align: text-bottom; }
+  .link a:hover {
+    background-color: white;
+    color: #336d85; }
+
 #events .pagination {
   float: right; }
 #events .error {
@@ -175,3 +193,6 @@ div#search_container #search_box {
   .event .date {
     font-size: .85em;
     color: #555555; }
+
+.fb-like {
+  margin-left: 10px; }
