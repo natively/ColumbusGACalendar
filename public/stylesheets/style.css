@@ -7,13 +7,9 @@
 li {
   list-style: none; }
 
-a {
-  text-decoration: none; }
-  a:hover {
-    background-color: #cce2eb; }
-  a.button:hover {
-    background-color: white;
-    display: block; }
+a.button:hover {
+  background-color: white;
+  display: block; }
 
 div#header {
   margin-bottom: 8px; }
@@ -45,6 +41,12 @@ div.upcoming_events_header {
 
 div#featured_events {
   width: 288px; }
+  div#featured_events a {
+    text-decoration: underline;
+    color: #254f60; }
+    div#featured_events a:hover {
+      color: #336d85;
+      background-color: white; }
   div#featured_events div.featured_events_header {
     width: 288px; }
     div#featured_events div.featured_events_header h2 {
@@ -128,6 +130,8 @@ div#search_container #search_box {
       margin-left: 5px; }
   .ui-datepicker table {
     width: 100%; }
+    .ui-datepicker table a {
+      text-decoration: none; }
     .ui-datepicker table th {
       text-align: center;
       background-color: white; }
@@ -195,9 +199,9 @@ div#search_container #search_box {
   .event .event_name {
     font-family: Georgia;
     font-size: 1.3em;
-    line-height: 1.25em;
-    text-decoration: underline; }
+    line-height: 1.25em; }
     .event .event_name a {
+      text-decoration: underline;
       color: #254f60; }
       .event .event_name a:hover {
         color: #336d85;

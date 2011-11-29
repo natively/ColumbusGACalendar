@@ -10,6 +10,19 @@ $yellow: #fff3bf;
 $blue: #336d85;
 $green: #8ab77a;
 
+@mixin event_title_link_helper 
+{
+  a 
+  {
+    text-decoration:underline;
+    &:hover 
+    { 
+      color:$blue;
+      background-color:white; 
+    }
+    color: darken($blue, 10%); 
+  }
+}
 @mixin header {
   h2 {
     padding: 10px;
@@ -24,8 +37,7 @@ $green: #8ab77a;
 li {
   list-style: none; }
 
-a { text-decoration:none;
-  &:hover { background-color: lighten($blue, 50%); } 
+a {
   &.button { &:hover { background-color: white; display:block; } } }
 
 div#header {
@@ -53,9 +65,9 @@ div.upcoming_events_header {
 
 div#featured_events {
   width: 288px;
+  @include event_title_link_helper;
   div.featured_events_header {
     width: 288px;
-    //background-color: $blue;
     @include header; }
   p {
     padding: 10px;
@@ -105,6 +117,7 @@ div#search_container {
     &.ui-datepicker-next {
       margin-left: 5px; } }
   table {
+    a { text-decoration:none; }
     width: 100%;
     th {
       text-align: center;
@@ -169,11 +182,7 @@ div#search_container {
     font-family: Georgia;
     font-size: 1.3em;
     line-height: 1.25em;
-    text-decoration:underline;
-    a {
-      &:hover { color:$blue;
-                background-color:white; }
-      color: darken($blue, 10%); } }
+    @include event_title_link_helper; }
   .date {
     text-align:center;
     float:left;
