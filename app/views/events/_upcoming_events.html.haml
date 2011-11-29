@@ -11,11 +11,10 @@
       .event_name= link_to e.name, e
       .event_details
         %p
-          %span Where:
           = e.location
         %p
           = e.starts_at.strftime("%A %b %d, %Y %I:%M%p") + " to "
           = e.ends_at.strftime("%A %b %d, %Y %I:%M%p")
-        %p.event_description= e.description
+        %p.event_description= e.description.slice(0..140) + "..."
         - unless e.additional_info.blank?
           %p.description!= Rinku.auto_link(e.additional_info)
