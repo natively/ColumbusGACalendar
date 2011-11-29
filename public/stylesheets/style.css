@@ -7,6 +7,10 @@
 li {
   list-style: none; }
 
+a:hover {
+  background-color: white;
+  color: #17313b;
+  cursor: pointer; }
 a.button:hover {
   background-color: white;
   display: block; }
@@ -167,6 +171,8 @@ div#search_container #search_box {
 
 #events .pagination {
   float: right; }
+  #events .pagination a {
+    text-decoration: none; }
 #events .error {
   width: 564px;
   float: right; }

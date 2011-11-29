@@ -38,6 +38,12 @@ li {
   list-style: none; }
 
 a {
+  &:hover
+  {
+    background-color:white;
+    color:darken($blue, 20%);
+    cursor:pointer;
+  };
   &.button { &:hover { background-color: white; display:block; } } }
 
 div#header {
@@ -148,8 +154,12 @@ div#search_container {
   a:hover{ background-color:white; color:$blue; } }
 
 #events {
-  .pagination {
-    float: right; }
+  .pagination 
+  {
+    float: right;
+    a { text-decoration:none;
+    }
+  }
   .error {
     width: 564px;
     float: right; }
