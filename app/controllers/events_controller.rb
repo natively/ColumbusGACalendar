@@ -8,7 +8,8 @@ class EventsController < ApplicationController
                    .search(params[:keyword])
                    .group_filter(params[:group])
                    .order('starts_at')
-                   .paginate(:page => params[:page], :per_page => 15 )
+                   .paginate(:page => params[:page], 
+                             :per_page => params[:results_per_page])
                    # .group_filter(params[:group])
     @featured_events = Event.featured.after_today
     @featured_events = @featured_events[rand(@featured_events.size)]
@@ -23,8 +24,10 @@ class EventsController < ApplicationController
   # GET /events/print
   def print
     @title = "Columbus GA Calendar - Print"
-    @events = Event.after_today.order('starts_at')
-
+    @events = Event.date_filter(params[:from], params[:to])
+                   .search(params[:keyword])
+                   .group_filter(params[:group])
+                   .order('starts_at')
     respond_to do |format|
       format.html
     end

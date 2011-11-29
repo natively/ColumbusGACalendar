@@ -110,8 +110,16 @@ div#search_container {
       text-align: center;
       background-color: white; }
     td {
+      a:hover { background-color:$blue; }
+      &:hover { 
+        cursor:pointer;
+        background-color:$blue;
+        };
       padding: 3px 0px;
-      text-align: center; } } }
+      text-align: center; 
+      background-color:white; 
+      &.ui-datepicker-other-month {
+        background-color: lighten($green,30%); } } } }
 
 .cal_from {
   text-align: right;
@@ -133,7 +141,6 @@ div#search_container {
     width: 564px;
     float: right; }
   .event_details {
-    display: none;
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -152,18 +159,28 @@ div#search_container {
   margin-bottom: 50px !important; }
 
 .event {
+  margin-top:1em;
   padding: 5px;
+  p { margin-left:5em; }
   &.even {
     background-color: #fff; }
-  &.odd {
-    background-color: lighten($yellow, 10%); }
+  &.odd {}
   .event_name {
     font-family: Georgia;
     font-size: 1.3em;
     line-height: 1.25em;
+    text-decoration:underline;
     a {
+      &:hover { color:$blue;
+                background-color:white; }
       color: darken($blue, 10%); } }
   .date {
+    text-align:center;
+    float:left;
+    margin:1em;
+    margin-top:0em;
+    width:5em;
+    height:2.5em;
     font-size: .85em;
     color: $gray; } }
     

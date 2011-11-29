@@ -7,17 +7,15 @@
   - @events.each_with_index do |e, i|
   - row_class = i%2 == 0 ? "even" : "odd"
     %li.event{ :class => "#{row_class}" }
-      %span.date= e.starts_at.strftime("%B %d, %Y")
-      .event_name= link_to e.name
+      .date= e.starts_at.strftime("%b %d, %Y")
+      .event_name= link_to e.name, e
       .event_details
         %p
           %span Where:
           = e.location
         %p
-          %span Begins:
-          = e.starts_at.strftime("%A %b %d, %Y %I:%M%p")
-        %p
-          %span Ends:
+          = e.starts_at.strftime("%A %b %d, %Y %I:%M%p") + " to "
           = e.ends_at.strftime("%A %b %d, %Y %I:%M%p")
-        %p.event_description= e.description.slice(0..280)+'...'
-        = link_to 'More Info →', e, :class => "more_info"
+        %p.event_description= e.description
+        - unless e.additional_info.blank?
+          %p.description!= Rinku.auto_link(e.additional_info)

@@ -7,6 +7,9 @@
 }(document, 'script', 'facebook-jssdk'));
 
 $(document).ready(function() {  
+  
+  // grrrr....
+  var params_date = $('#from').val();
   $(".cal_from").datepicker({
     onSelect: function() {
       $("#search_box").submit();
@@ -15,6 +18,7 @@ $(document).ready(function() {
     prevText: "&larr; Prev",
     nextText: "Next &rarr;"
   });
+  $('#from').val(params_date);
 
   $(".reset").click(function() {
     $(".form_field").val("");
@@ -35,8 +39,4 @@ $(document).ready(function() {
     nextText: "Next &rarr;"
   });
 
-  $('.event_name a').bind('click', function(){
-    $(this).parent().next('.event_details').toggle();
-    return false;
-  });
 });
