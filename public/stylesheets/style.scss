@@ -71,6 +71,7 @@ div.upcoming_events_header {
   @include header; }
 
 div#featured_events {
+  .featured_event { margin-top: 1.5em; }
   width: 288px;
   @include event_title_link_helper;
   div.featured_events_header {

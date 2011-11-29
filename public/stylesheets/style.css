@@ -46,6 +46,8 @@ div.upcoming_events_header {
 
 div#featured_events {
   width: 288px; }
+  div#featured_events .featured_event {
+    margin-top: 1.5em; }
   div#featured_events a {
     text-decoration: underline;
     color: #1e404e; }
