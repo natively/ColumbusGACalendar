@@ -62,7 +62,7 @@ div#featured_events {
       font-family: Georgia;
       font-weight: normal; }
   div#featured_events p {
-    padding: 10px;
+    padding: 0.5em;
     padding-top: 3px;
     padding-bottom: 3px; }
     div#featured_events p.date {
