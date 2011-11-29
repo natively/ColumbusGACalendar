@@ -39,7 +39,6 @@ div.upcoming_events_header {
   div.upcoming_events_header h2 {
     padding: 10px;
     color: #8ab77a;
-    font-style: italic;
     display: block;
     font-size: 2em;
     font-family: Georgia;
@@ -58,7 +57,6 @@ div#featured_events {
     div#featured_events div.featured_events_header h2 {
       padding: 10px;
       color: #8ab77a;
-      font-style: italic;
       display: block;
       font-size: 2em;
       font-family: Georgia;
@@ -86,7 +84,6 @@ div#event_details {
   div#event_details h2 {
     padding: 10px;
     color: #8ab77a;
-    font-style: italic;
     display: block;
     font-size: 2em;
     font-family: Georgia;
@@ -113,7 +110,6 @@ div#event_details {
 div#search_container h2 {
   padding: 10px;
   color: #8ab77a;
-  font-style: italic;
   display: block;
   font-size: 2em;
   font-family: Georgia;

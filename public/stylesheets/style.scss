@@ -28,7 +28,6 @@ $green: #8ab77a;
   h2 {
     padding: 10px;
     color: $green;
-    font-style: italic;
     display: block;
     font-size: 2em;
     //background-color: $blue;
@@ -82,7 +81,6 @@ div#featured_events {
     padding-top: 3px;
     padding-bottom: 3px;
     &.date {
-      //font-style: italic;
       color: $gray; } }
   h3 {
     margin-top: 10px;
