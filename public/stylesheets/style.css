@@ -7,13 +7,15 @@
 li {
   list-style: none; }
 
-a:hover {
-  background-color: white;
-  color: #17313b;
-  cursor: pointer; }
-a.button:hover {
-  background-color: white;
-  display: block; }
+a {
+  color: #254f60; }
+  a:hover {
+    background-color: white;
+    color: #17313b;
+    cursor: pointer; }
+  a.button:hover {
+    background-color: white;
+    display: block; }
 
 div#header {
   margin-bottom: 8px; }
@@ -47,7 +49,7 @@ div#featured_events {
   width: 288px; }
   div#featured_events a {
     text-decoration: underline;
-    color: #254f60; }
+    color: #1e404e; }
     div#featured_events a:hover {
       color: #336d85;
       background-color: white; }
@@ -208,7 +210,7 @@ div#search_container #search_box {
     line-height: 1.25em; }
     .event .event_name a {
       text-decoration: underline;
-      color: #254f60; }
+      color: #1e404e; }
       .event .event_name a:hover {
         color: #336d85;
         background-color: white; }

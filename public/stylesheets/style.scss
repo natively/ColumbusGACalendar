@@ -20,7 +20,7 @@ $green: #8ab77a;
       color:$blue;
       background-color:white; 
     }
-    color: darken($blue, 10%); 
+    color: darken($blue, 15%); 
   }
 }
 @mixin header {
@@ -38,6 +38,7 @@ li {
   list-style: none; }
 
 a {
+  color: darken($blue, 10%); 
   &:hover
   {
     background-color:white;
