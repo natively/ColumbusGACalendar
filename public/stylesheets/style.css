@@ -146,7 +146,8 @@ div#search_container #search_box {
       text-align: center;
       background-color: white; }
       .ui-datepicker table td a:hover {
-        background-color: #336d85; }
+        background-color: #336d85;
+        color: white; }
       .ui-datepicker table td:hover {
         cursor: pointer;
         background-color: #336d85; }

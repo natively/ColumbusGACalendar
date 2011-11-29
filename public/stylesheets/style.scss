@@ -5,6 +5,7 @@
   margin: 0px;
   padding: 0px; }
 
+
 $gray: #555555;
 $yellow: #fff3bf;
 $blue: #336d85;
@@ -130,7 +131,7 @@ div#search_container {
       text-align: center;
       background-color: white; }
     td {
-      a:hover { background-color:$blue; }
+      a:hover { background-color:$blue; color:white; }
       &:hover { 
         cursor:pointer;
         background-color:$blue;
