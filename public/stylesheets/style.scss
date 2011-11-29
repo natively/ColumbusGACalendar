@@ -26,6 +26,7 @@ $green: #8ab77a;
 }
 @mixin header {
   h2 {
+    padding-left:0.2em;
     padding-top: 1em;
     color: $blue;
     display: block;
@@ -65,10 +66,12 @@ div#header {
   width: 900px; }
 
 div.upcoming_events_header {
+  @include header;
+  h2 { padding-left:3em; }
   float: right;
   width: 588px;
   //background-color: $blue;
-  @include header; }
+}
 
 div#featured_events {
   .featured_event { margin-top: 1.5em; }

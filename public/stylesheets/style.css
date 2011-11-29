@@ -37,12 +37,15 @@ div.upcoming_events_header {
   float: right;
   width: 588px; }
   div.upcoming_events_header h2 {
+    padding-left: 0.2em;
     padding-top: 1em;
     color: #336d85;
     display: block;
     font-size: 2em;
     font-family: Georgia;
     font-weight: normal; }
+  div.upcoming_events_header h2 {
+    padding-left: 3em; }
 
 div#featured_events {
   width: 288px; }
@@ -57,6 +60,7 @@ div#featured_events {
   div#featured_events div.featured_events_header {
     width: 288px; }
     div#featured_events div.featured_events_header h2 {
+      padding-left: 0.2em;
       padding-top: 1em;
       color: #336d85;
       display: block;
@@ -84,6 +88,7 @@ div#event_details {
   width: 900px;
   margin: auto; }
   div#event_details h2 {
+    padding-left: 0.2em;
     padding-top: 1em;
     color: #336d85;
     display: block;
@@ -110,6 +115,7 @@ div#event_details {
       padding: 10px; }
 
 div#search_container h2 {
+  padding-left: 0.2em;
   padding-top: 1em;
   color: #336d85;
   display: block;
