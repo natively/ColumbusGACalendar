@@ -130,11 +130,17 @@ div#search_container {
       text-align: center;
       background-color: white; }
     td {
-      a:hover { background-color:$blue; color:white; }
-      &:hover { 
+      a:hover
+      {
+        color:white;
+        background-color:$blue;
+      }
+      &:hover 
+      { 
+        a { color:white };
         cursor:pointer;
         background-color:$blue;
-        };
+      }
       padding: 3px 0px;
       text-align: center; 
       background-color:white; 

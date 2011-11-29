@@ -144,11 +144,13 @@ div#search_container #search_box {
       text-align: center;
       background-color: white; }
       .ui-datepicker table td a:hover {
-        background-color: #336d85;
-        color: white; }
+        color: white;
+        background-color: #336d85; }
       .ui-datepicker table td:hover {
         cursor: pointer;
         background-color: #336d85; }
+        .ui-datepicker table td:hover a {
+          color: white; }
       .ui-datepicker table td.ui-datepicker-other-month {
         background-color: #e1eddd; }
 
