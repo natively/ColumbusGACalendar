@@ -4,8 +4,8 @@ task :cron => :environment do
   require 'nokogiri'
   require 'open-uri'
 
-  puts 'Killing the old events table...'
-  Event.destroy_all
+  #puts 'Killing the old events table...'
+  #Event.destroy_all
   puts 'Killing the old groups table...'
   Group.destroy_all
 

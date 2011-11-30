@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
     @events = Event.date_filter(params[:from], params[:to])
                    .search(params[:keyword])
-                   .group_filter(params[:group])
+                   .group_filter(params[:group_id])
                    .order('starts_at')
                    .paginate(:page => params[:page], 
                              :per_page => params[:results_per_page])

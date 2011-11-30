@@ -22,16 +22,14 @@ class Event < ActiveRecord::Base
     end
   end
 
-  def self.group_filter(arg={})
-    unless arg.nil?
-      unless arg[:group_id].empty?
-        puts 'Finding by group id'
-        g_id = arg['group_id']
-        joins(:groups).where("events_groups.group_id = ?", g_id)
+  def self.group_filter( group_id )
+    unless group_id.nil?
+      unless group_id.empty?
+        joins(:groups).where("events_groups.group_id = ?", group_id)
+      else
+        scoped
       end
-      scoped
     else
-      puts 'Scoped!'
       scoped
     end
   end
