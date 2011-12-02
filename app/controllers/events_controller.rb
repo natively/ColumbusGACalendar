@@ -13,7 +13,7 @@ class EventsController < ApplicationController
                    # .group_filter(params[:group])
     @featured_events = Event.featured.after_today
     @featured_events = @featured_events[rand(@featured_events.size)]
-
+    @groups = Group.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @events }
