@@ -4,11 +4,6 @@ task :cron => :environment do
   require 'nokogiri'
   require 'open-uri'
 
-  #puts 'Killing the old events table...'
-  #Event.destroy_all
-  puts 'Killing the old groups table...'
-  Group.destroy_all
-
   #populate the groups table
   puts 'Creating groups...'
   group_url = "http://xml.eventbooking.com/xml_pubcal.asp?pwl=5A6.6C9A4BC4&mode=setupinfo"

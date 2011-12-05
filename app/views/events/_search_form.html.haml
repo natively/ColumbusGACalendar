@@ -13,7 +13,7 @@
       %td= text_field_tag :to, params[:to], :class => "form_field"
     %tr
       %td= label :group, "Category:"
-      %td= select_tag "group_id", options_from_collection_for_select(@groups, :id, :group_name, params[:group_id]), :include_blank => true, :class => "form_field"
+      %td= select_tag "group_id", raw(options_from_collection_for_select(@groups, :id, :group_name, params[:group_id])), :include_blank => true, :class => "form_field"
     %tr
       %td= label :results_per_page, "Results Per Page:"
       %td= select_tag "results_per_page", options_for_select(["10", "30", "100"], params[:results_per_page]), :class => "form_field"
