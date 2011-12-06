@@ -25,6 +25,12 @@ $(document).ready(function() {
     return;
   });
 
+  $("#print a").click(function() {
+    $("#left").hide();
+    $("#header").hide();
+    return false;
+  });
+  
   var dates = $("#from, #to").datepicker({
     onSelect: function( selectedDate ) {
       var option = this.id == "from" ? "minDate" : "maxDate",

@@ -4,5 +4,5 @@
     #search_container= render 'search_form'
     .link= link_to image_tag("submit.png")+"Submit an Event", "http://sm.ebfanclub.com/cc_subev.asp?calpwl=5A7.2FF3BF21&ccpwl=5A6.6C9A4BC4", :target => "_blank"
     .link= link_to image_tag("email.png")+"Join Our Mailing List", "http://sm.ebfanclub.com/fc_join.asp?fc=E4.4013033A", :target => "_blank"
-    .link= link_to image_tag("print.png")+"Printer Friendly", events_print_path
+    .link#print= link_to image_tag("print.png")+"Printer Friendly", "#"
   #events= render 'upcoming_events'
