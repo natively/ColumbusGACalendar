@@ -122,6 +122,8 @@ div#search_container h2 {
   font-size: 2em;
   font-family: Georgia;
   font-weight: normal; }
+div#search_container h2 {
+  margin-bottom: 0.5em; }
 div#search_container #search_box {
   padding-top: 3px;
   background: #c4dbbc; }
