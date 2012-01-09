@@ -199,6 +199,8 @@ div#search_container #search_box {
       color: #336d85; }
     #events .event_details p.event_description {
       margin-top: 1em; }
+    #events .event_details p.hidden {
+      display: none; }
 
 #list {
   float: right;

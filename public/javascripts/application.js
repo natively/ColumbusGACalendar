@@ -28,6 +28,11 @@ $(document).ready(function() {
   $("#print a").click(function() {
     $("#left").hide();
     $("#header").hide();
+    $(".event_description").hide();
+    $(".pagination").hide();
+    $(".event_description.hidden").show();
+    $(".upcoming_events_header").css("float", "none").css("width","100%");
+    $("#list").css("float", "none").css("width", "100%");
     return false;
   });
   

@@ -15,6 +15,7 @@
           = e.starts_at.strftime("%A %b %d, %Y %I:%M%p") + " to "
           = e.ends_at.strftime("%A %b %d, %Y %I:%M%p")
         %p.event_description= e.description.slice(0..140) + "..."
+        %p.event_description.hidden= e.description
         - unless e.additional_info.blank?
           %p.description!= Rinku.auto_link(e.additional_info)
   = will_paginate @events
