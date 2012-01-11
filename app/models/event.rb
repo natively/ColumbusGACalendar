@@ -10,13 +10,13 @@ class Event < ActiveRecord::Base
     if !starts && !ends
       after_today
     elsif !starts.empty? && !ends.empty?
-      where 'starts_at > ? AND ends_at < ?',
+      where 'starts_at >= ? AND ends_at <= ?',
              DateTime.strptime(starts.to_s, '%m/%d/%Y'), 
              DateTime.strptime(ends.to_s, '%m/%d/%Y')
     elsif !starts.empty? && ends.empty?
-      where 'starts_at > ?', DateTime.strptime(starts.to_s, '%m/%d/%Y')
+      where 'starts_at >= ?', DateTime.strptime(starts.to_s, '%m/%d/%Y')
     elsif starts.empty? && !ends.empty?
-      where 'starts_at < ?', DateTime.strptime(ends.to_s, '%m/%d/%Y')
+      where 'starts_at <= ?', DateTime.strptime(ends.to_s, '%m/%d/%Y')
     else
       after_today
     end
