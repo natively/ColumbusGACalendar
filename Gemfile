@@ -14,10 +14,13 @@ end
 
 gem 'haml'
 gem 'nokogiri'
-gem 'will_paginate'
-gem 'meta_search'
+gem 'kaminari'
 gem 'jquery-rails'
 gem 'rinku'
+gem 'activeadmin'
+gem 'sass-rails'
+gem "meta_search", '>= 1.1.0.pre'
+gem 'thin'
 
 # Use unicorn as the web server
 # gem 'unicorn'

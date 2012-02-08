@@ -8,8 +8,8 @@ class EventsController < ApplicationController
                    .search(params[:keyword])
                    .group_filter(params[:group_id])
                    .order('starts_at')
-                   .paginate(:page => params[:page], 
-                             :per_page => params[:results_per_page])
+                   .page(params[:page])
+                   .per(params[:results_per_page])
                    # .group_filter(params[:group])
     @featured_events = Event.featured.after_today
     @featured_events = @featured_events[rand(@featured_events.size)]

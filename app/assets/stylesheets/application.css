@@ -1,0 +1,238 @@
+/* Let's keep it simple this time, okay? */
+/* reset */
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #254f60; }
+  a:hover {
+    background-color: white;
+    color: #17313b;
+    cursor: pointer; }
+  a.button:hover {
+    background-color: white;
+    display: block; }
+
+div#header {
+  margin-bottom: 8px; }
+  div#header a img {
+    border: none; }
+  div#header a:hover {
+    background-color: white; }
+
+#left {
+  float: left;
+  width: 288px;
+  margin-left: 12px; }
+
+.content {
+  margin: auto;
+  width: 900px; }
+
+div.upcoming_events_header {
+  float: right;
+  width: 588px; }
+  div.upcoming_events_header h2 {
+    padding-left: 0.2em;
+    padding-top: 1em;
+    color: #336d85;
+    display: block;
+    font-size: 2em;
+    font-family: Georgia;
+    font-weight: normal; }
+  div.upcoming_events_header h2 {
+    padding-left: 3em; }
+
+div#featured_events {
+  width: 288px; }
+  div#featured_events .featured_event {
+    margin-top: 1.5em; }
+  div#featured_events a {
+    text-decoration: underline;
+    color: #1e404e; }
+    div#featured_events a:hover {
+      color: #336d85;
+      background-color: white; }
+  div#featured_events div.featured_events_header {
+    width: 288px; }
+    div#featured_events div.featured_events_header h2 {
+      padding-left: 0.2em;
+      padding-top: 1em;
+      color: #336d85;
+      display: block;
+      font-size: 2em;
+      font-family: Georgia;
+      font-weight: normal; }
+  div#featured_events p {
+    padding: 0.5em;
+    padding-top: 3px;
+    padding-bottom: 3px; }
+    div#featured_events p.date {
+      color: #555555; }
+  div#featured_events h3 {
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em; }
+  div#featured_events img {
+    float: left;
+    padding: 10px;
+    padding-top: 0; }
+
+div#event_details {
+  width: 900px;
+  margin: auto; }
+  div#event_details h2 {
+    padding-left: 0.2em;
+    padding-top: 1em;
+    color: #336d85;
+    display: block;
+    font-size: 2em;
+    font-family: Georgia;
+    font-weight: normal; }
+  div#event_details a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #336d85; }
+    div#event_details a.button {
+      text-decoration: none; }
+  div#event_details h2 {
+    line-height: 1em; }
+  div#event_details img.event_image {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+  div#event_details p {
+    padding-left: 10px; }
+    div#event_details p span {
+      color: #336d85; }
+    div#event_details p.description {
+      padding: 10px; }
+
+div#search_container h2 {
+  padding-left: 0.2em;
+  padding-top: 1em;
+  color: #336d85;
+  display: block;
+  font-size: 2em;
+  font-family: Georgia;
+  font-weight: normal; }
+div#search_container h2 {
+  margin-bottom: 0.5em; }
+div#search_container #search_box {
+  padding-top: 3px;
+  background: #c4dbbc; }
+  div#search_container #search_box label {
+    margin-left: 6px; }
+  div#search_container #search_box input {
+    width: 138px; }
+  div#search_container #search_box select {
+    width: 138px; }
+
+.ui-datepicker {
+  background-color: #f1f7f9; }
+  .ui-datepicker a {
+    cursor: pointer; }
+    .ui-datepicker a.ui-datepicker-next {
+      margin-left: 5px; }
+  .ui-datepicker table {
+    width: 100%; }
+    .ui-datepicker table a {
+      text-decoration: none; }
+    .ui-datepicker table th {
+      text-align: center;
+      background-color: white; }
+    .ui-datepicker table td {
+      padding: 3px 0px;
+      text-align: center;
+      background-color: white; }
+      .ui-datepicker table td a:hover {
+        color: white;
+        background-color: #336d85; }
+      .ui-datepicker table td:hover {
+        cursor: pointer;
+        background-color: #336d85; }
+        .ui-datepicker table td:hover a {
+          color: white; }
+      .ui-datepicker table td.ui-datepicker-other-month {
+        background-color: #e1eddd; }
+
+.cal_from {
+  text-align: right; }
+  .cal_from .ui-datepicker {
+    background-color: #e1eddd; }
+    .cal_from .ui-datepicker .ui-datepicker-title {
+      float: left;
+      margin-left: 6px;
+      font-weight: bold; }
+
+.link {
+  font-size: 1em;
+  margin-top: 10px; }
+  .link img {
+    vertical-align: text-bottom; }
+  .link a:hover {
+    background-color: white;
+    color: #336d85; }
+
+#events .pagination {
+  float: right; }
+  #events .pagination a {
+    text-decoration: none; }
+#events .error {
+  width: 564px;
+  float: right; }
+#events .event_details {
+  margin-left: 1em;
+  margin-bottom: 1em; }
+  #events .event_details a.more_info {
+    float: right;
+    color: #336d85; }
+  #events .event_details p {
+    margin-top: 0.25em; }
+    #events .event_details p span {
+      color: #336d85; }
+    #events .event_details p.event_description {
+      margin-top: 1em; }
+    #events .event_details p.hidden {
+      display: none; }
+
+#list {
+  float: right;
+  width: 588px;
+  margin-bottom: 50px !important; }
+
+.event {
+  margin-top: 1em;
+  padding: 5px; }
+  .event p {
+    margin-left: 5em; }
+  .event.even {
+    background-color: #fff; }
+  .event .event_name {
+    font-family: Georgia;
+    font-size: 1.3em;
+    line-height: 1.25em; }
+    .event .event_name a {
+      text-decoration: underline;
+      color: #1e404e; }
+      .event .event_name a:hover {
+        color: #336d85;
+        background-color: white; }
+  .event .date {
+    text-align: center;
+    float: left;
+    margin: 1em;
+    margin-top: 0em;
+    width: 5em;
+    height: 2.5em;
+    font-size: .85em;
+    color: #555555; }
+
+.fb-like {
+  margin-left: 10px; }
