@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   validates_uniqueness_of :unique_event_id
-
+  self.primary_key="unique_event_id"
   has_and_belongs_to_many :groups
 
   scope :after_today, where('starts_at >= ?', Time.now )

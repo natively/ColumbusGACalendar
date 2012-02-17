@@ -46,10 +46,10 @@ task :cron => :environment do
     contact_phone = (e_details>"contact_phone").text
 
     group_collection = e_details.xpath("//group").collect { |g| g['defn_id'] }
-
-    Event.new(
+    
+    new_event = Event.find_or_create_by_unique_event_id( e['event_id'] )
+    new_event.update_attributes(
       :name => (e>"event_name").text,
-      :unique_event_id => e['event_id'],
       :description => (e_details>"description").text,
       :featured => featured,
       :image_url => image_url,
